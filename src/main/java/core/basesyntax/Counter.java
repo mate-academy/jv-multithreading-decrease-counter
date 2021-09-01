@@ -15,9 +15,7 @@ public class Counter {
     public synchronized void decreaseValue() {
         logger.info(String.format(MESSAGE,
                 "Before decrementing", Thread.currentThread().getName(), value));
-        synchronized (Counter.class) {
             value--;
-        }
         logger.info(String.format(MESSAGE,
                 "After decrementing", Thread.currentThread().getName(), value));
     }
