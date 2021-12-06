@@ -12,17 +12,15 @@ public class Counter {
         this.value = value;
     }
 
-    public synchronized void decreaseValue() {
+    public void decreaseValue() {
         if (value > 0) {
-            logger.info(String.format(MESSAGE,
-                    "Before decrementing", Thread.currentThread().getName(), value));
-            value--;
-            logger.info(String.format(MESSAGE,
-                    "After decrementing", Thread.currentThread().getName(), value));
+            synchronized (Counter.class) {
+                logger.info(String.format(MESSAGE,
+                        "Before decrementing", Thread.currentThread().getName(), value));
+                value--;
+                logger.info(String.format(MESSAGE,
+                        "After decrementing", Thread.currentThread().getName(), value));
+            }
         }
-    }
-
-    public synchronized int getValue() {
-        return value;
     }
 }
