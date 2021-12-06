@@ -14,13 +14,11 @@ public class Counter {
 
     public void decreaseValue() {
         if (value > 0) {
-            synchronized (Counter.class) {
-                logger.info(String.format(MESSAGE,
-                        "Before decrementing", Thread.currentThread().getName(), value));
-                value--;
-                logger.info(String.format(MESSAGE,
-                        "After decrementing", Thread.currentThread().getName(), value));
-            }
+            logger.info(String.format(MESSAGE,
+                    "Before decrementing", Thread.currentThread().getName(), value));
+            value--;
+            logger.info(String.format(MESSAGE,
+                    "After decrementing", Thread.currentThread().getName(), value));
         }
     }
 }
