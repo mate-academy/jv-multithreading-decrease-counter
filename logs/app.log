@@ -1,5 +1,5 @@
-INFO core.basesyntax.Counter:16  Before decrementing, Thread #  2, counter value 20
-INFO core.basesyntax.Counter:19   After decrementing, Thread #  2, counter value 19
+INFO core.basesyntax.Counter:16  Before decrementing, Thread #  1, counter value 20
+INFO core.basesyntax.Counter:19   After decrementing, Thread #  1, counter value 19
 INFO core.basesyntax.Counter:16  Before decrementing, Thread # 20, counter value 19
 INFO core.basesyntax.Counter:19   After decrementing, Thread # 20, counter value 18
 INFO core.basesyntax.Counter:16  Before decrementing, Thread # 19, counter value 18
@@ -36,5 +36,5 @@ INFO core.basesyntax.Counter:16  Before decrementing, Thread #  4, counter value
 INFO core.basesyntax.Counter:19   After decrementing, Thread #  4, counter value  2
 INFO core.basesyntax.Counter:16  Before decrementing, Thread #  3, counter value  2
 INFO core.basesyntax.Counter:19   After decrementing, Thread #  3, counter value  1
-INFO core.basesyntax.Counter:16  Before decrementing, Thread #  1, counter value  1
-INFO core.basesyntax.Counter:19   After decrementing, Thread #  1, counter value  0
+INFO core.basesyntax.Counter:16  Before decrementing, Thread #  2, counter value  1
+INFO core.basesyntax.Counter:19   After decrementing, Thread #  2, counter value  0
