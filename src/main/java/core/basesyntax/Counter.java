@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 public class Counter {
     private static final Logger logger = LogManager.getLogger(Counter.class);
     private static final String MESSAGE = "%20s, Thread # %2s, counter value %2d";
-    volatile private int value;
+    private int value;
 
     public Counter(int value) {
         this.value = value;
