@@ -9,6 +9,10 @@
         </File>
     </Appenders>
     <Loggers>
+        <Logger name="core.basesyntax" level="info" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
         <Root level="info">
             <AppenderRef ref="LogToFile"/>
             <AppenderRef ref="LogToConsole"/>
