@@ -38,3 +38,4 @@ INFO  core.basesyntax.Counter:16 -  Before decrementing, Thread #  3, counter va
 INFO  core.basesyntax.Counter:19 -   After decrementing, Thread #  3, counter value  1
 INFO  core.basesyntax.Counter:16 -  Before decrementing, Thread #  2, counter value  1
 INFO  core.basesyntax.Counter:19 -   After decrementing, Thread #  2, counter value  0
+
