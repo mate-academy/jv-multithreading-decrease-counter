@@ -13,7 +13,7 @@ public class Counter {
     }
 
     public void decreaseValue() {
-        if (value > 0 ) {
+        if (value > 0) {
             logger.info(String.format(MESSAGE,
                     "Before decrementing", Thread.currentThread().getName(), value));
             value--;
