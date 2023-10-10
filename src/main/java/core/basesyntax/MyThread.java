@@ -10,6 +10,8 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
-        counter.decreaseValue();
+        synchronized(counter) {
+            counter.decreaseValue();
+        }
     }
 }
