@@ -5,7 +5,7 @@ public class MyThread extends Thread {
 
     public MyThread(Counter counter, String name) {
         super(name);
-        this.counter = counter;
+            this.counter = counter;
     }
 
     @Override
