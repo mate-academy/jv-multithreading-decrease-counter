@@ -8,11 +8,11 @@ public class Counter {
     private static final String MESSAGE = "%20s, Thread # %2s, counter value %2d";
     private int value;
 
-    public Counter(int value) {
+    public  Counter(int value) {
         this.value = value;
     }
 
-    public void decreaseValue() {
+    public synchronized void decreaseValue() {
         logger.info(String.format(MESSAGE,
                 "Before decrementing", Thread.currentThread().getName(), value));
         value--;
