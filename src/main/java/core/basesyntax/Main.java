@@ -6,5 +6,6 @@ public class Main {
         for (int i = 1; i <= 20; i++) {
             new MyThread(counter, String.valueOf(i)).start();
         }
+
     }
 }
