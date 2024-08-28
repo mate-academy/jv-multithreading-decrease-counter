@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import java.util.concurrent.atomic.AtomicInteger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,7 +16,7 @@ public class Counter {
         return value;
     }
 
-    public synchronized void  decreaseValue() {
+    public synchronized void decreaseValue() {
         logger.info(String.format(MESSAGE,
                 "Before decrementing", Thread.currentThread().getName(), value));
         value--;
