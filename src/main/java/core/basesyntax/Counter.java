@@ -12,8 +12,10 @@ public class Counter {
     }
 
     public synchronized void decrement() {
-        logger.info("Before decrementing, Thread #" + Thread.currentThread().getId() + ", counter value " + count);
+        logger.info("Before decrementing, Thread #" + Thread.currentThread().getId()
+                + ", counter value " + count);
         count--;
-        logger.info("After decrementing, Thread #" + Thread.currentThread().getId() + ", counter value " + count);
+        logger.info("After decrementing, Thread #" + Thread.currentThread().getId()
+                + ", counter value " + count);
     }
 }
