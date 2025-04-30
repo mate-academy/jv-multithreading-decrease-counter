@@ -13,3 +13,4 @@ public class MyThread extends Thread {
         counter.decreaseValue();
     }
 }
+
