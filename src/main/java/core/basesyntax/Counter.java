@@ -15,9 +15,8 @@ public class Counter {
 
     public void decreaseValue() {
         logger.info(String.format(MESSAGE,
-                "Before decrementing", Thread.currentThread().getName(), value));
-        value.decrementAndGet();
+                "Before decrementing", Thread.currentThread().getName(), value.get()));
         logger.info(String.format(MESSAGE,
-                "After decrementing", Thread.currentThread().getName(), value));
+                "After decrementing", Thread.currentThread().getName(), value.decrementAndGet()));
     }
 }
