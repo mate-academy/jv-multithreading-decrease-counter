@@ -58,5 +58,5 @@ Fix the solution to remove the race condition between the threads.
 Each thread should take the value that was decremented by the previous thread, and the logs should be consistent.
 Let's allow only one thread to execute the meaningful part of code at a time.
 
-Note that you should push the file with logs to your PR, so please, do not add it to `.gitignore`.
+Note that you should push the file with logs to your PR, so please, do not add it o `.gitignore`.
 You may probably need to use the absolute path to the log file in `log4j2.xml`.
