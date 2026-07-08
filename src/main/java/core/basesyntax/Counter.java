@@ -12,11 +12,13 @@ public class Counter {
         this.value = value;
     }
 
-    public void decreaseValue() {
-        logger.info(String.format(MESSAGE,
-                "Before decrementing", Thread.currentThread().getName(), value));
+    public synchronized void decreaseValue() {
+        System.out.println("Before decrementing, Thread # "
+                + Thread.currentThread().getName() + ", counter value " + value);
+
         value--;
-        logger.info(String.format(MESSAGE,
-                "After decrementing", Thread.currentThread().getName(), value));
+
+        System.out.println("After decrementing, Thread # "
+                + Thread.currentThread().getName() + ", counter value " + value);
     }
 }
