@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 public class Counter {
     private static final Logger logger = LogManager.getLogger(Counter.class);
     private static final String MESSAGE = "%20s, Thread # %2s, counter value %2d";
+    private final Object lock = new Object();
     private int value;
 
     public Counter(int value) {
@@ -13,10 +14,12 @@ public class Counter {
     }
 
     public void decreaseValue() {
-        logger.info(String.format(MESSAGE,
-                "Before decrementing", Thread.currentThread().getName(), value));
-        value--;
-        logger.info(String.format(MESSAGE,
-                "After decrementing", Thread.currentThread().getName(), value));
+        synchronized (lock) {
+            logger.info(String.format(MESSAGE,
+                    "Before decrementing", Thread.currentThread().getName(), value));
+            value--;
+            logger.info(String.format(MESSAGE,
+                    "After decrementing", Thread.currentThread().getName(), value));
+        }
     }
 }
