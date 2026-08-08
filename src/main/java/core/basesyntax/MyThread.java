@@ -10,6 +10,8 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
-        counter.decreaseValue();
+        while (counter.getValue() > 1) {
+            counter.decreaseValue();
+        }
     }
 }
