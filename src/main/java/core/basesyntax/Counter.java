@@ -12,7 +12,11 @@ public class Counter {
         this.value = value;
     }
 
-    public void decreaseValue() {
+    public int getValue() {
+        return value;
+    }
+
+    public synchronized void decreaseValue() {
         logger.info(String.format(MESSAGE,
                 "Before decrementing", Thread.currentThread().getName(), value));
         value--;
