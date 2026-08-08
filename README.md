@@ -10,7 +10,7 @@ We are logging the value before and after each decrement, and now we see that th
 
 ```
 INFO core.basesyntax.Counter:16  Before decrementing, Thread # 15, counter value 20
-INFO core.basesyntax.Counter:16  Before decrementing, Thread #  8, counter value 20
+INFO core.basesyntax.Counter[src](src):16  Before decrementing, Thread #  8, counter value 20
 INFO core.basesyntax.Counter:16  Before decrementing, Thread # 12, counter value 20
 INFO core.basesyntax.Counter:16  Before decrementing, Thread # 18, counter value 20
 INFO core.basesyntax.Counter:16  Before decrementing, Thread # 14, counter value 20
