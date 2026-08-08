@@ -7,16 +7,19 @@ public class Counter {
     private static final Logger logger = LogManager.getLogger(Counter.class);
     private static final String MESSAGE = "%20s, Thread # %2s, counter value %2d";
     private int value;
+    private final Object lock = new Object();
 
     public Counter(int value) {
         this.value = value;
     }
 
     public void decreaseValue() {
-        logger.info(String.format(MESSAGE,
-                "Before decrementing", Thread.currentThread().getName(), value));
-        value--;
-        logger.info(String.format(MESSAGE,
-                "After decrementing", Thread.currentThread().getName(), value));
+        synchronized (lock) {
+            logger.info(String.format(MESSAGE,
+                    "Before decrementing", Thread.currentThread().getName(), value));
+            value--;
+            logger.info(String.format(MESSAGE,
+                    "After decrementing", Thread.currentThread().getName(), value));
+        }
     }
 }
