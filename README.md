@@ -1,6 +1,6 @@
 # Decrease counter
 
-We wrote multi-threaded code that decreases the value of the `Counter` object.
+We wrote multithreaded code that decreases the value of the `Counter` object.
 In `main()` method, 20 threads are created that accept the same `Counter` object.
 The task of each thread is to decrease the value of the `counter` by 1.
 
